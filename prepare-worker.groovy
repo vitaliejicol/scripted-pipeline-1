@@ -4,7 +4,7 @@ properties([
         ])
     ])
 
-if (NodeIP?.trim()) {
+if (NodeIp?.trim()) {
     node {
         withCredentials([sshUserPrivateKey(credentialsId: 'master-jenkins-private', keyFileVariable: 'SSHKEY', passphraseVariable: '', usernameVariable: 'SSHUSERNAME')]) {
             stage('Init') {
